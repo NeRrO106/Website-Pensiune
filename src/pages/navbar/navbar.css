@@ -1,0 +1,35 @@
+
+.navbar {
+    background-color: var(--background-color);
+    color: white;
+    border-radius: 15px;
+    margin: 40px;
+    bottom: -5% !important;
+    left: 30% !important;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-link{
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-link:hover{
+    background-color: var(--button-color);
+    color: white !important;
+    transform: translateY(-1.5px);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}

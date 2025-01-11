@@ -1,0 +1,147 @@
+.main h1{
+    text-align: center;
+    color: var(--text-color-light);
+    margin-top: 10px;
+    text-shadow: 4px 4px 4px #000;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.right{
+    margin-top: 25px;
+    padding: 25px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+.right h2{
+    margin-top: 50px;
+    color: var(--text-color-light);
+    text-shadow: 6px 5px 5px #000;
+    text-align: center;
+}
+.right button, .left button{
+    height: 50px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--button-color);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.right button:hover, .left button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.left{
+    margin-top: 25px;
+    padding: 25px;
+    position: relative;
+}
+.background{
+    background-color: var(--background-color);
+    font-size: 25px;
+    max-width: 350px;
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label, span{
+    color: var(--text-color-light);
+    text-shadow: 6px 5px 20px #000;
+    font-weight: bold;
+}
+
+.form-container{
+    margin-top: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container h3{
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 3px 4px 10px #000;
+}
+
+.date-box{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.date-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.persoane-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.persoane-control button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: var(--button-color);
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px;
+}
+.submit-button{
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+button:hover{
+    background-color: #0056b3;
+    color: #fff;
+}
+.dropdown{
+    display: grid;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    margin-right: 10px;
+    margin-top: -40px;
+}
+.dropdown .btn{
+    font-size: 16px;
+    background-color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dropdown button:hover{
+    background-color: var(--button-color);
+    border: none;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
