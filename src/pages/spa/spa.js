@@ -3,8 +3,8 @@ import './spa.css';
 
 const Spa = () =>{
     return(
-        <div>
-            <h1>Spa</h1>
+        <div class="in-progress-container">
+            <h1>Pagina în lucru</h1>
         </div>
     );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import './restauran.css';
+import './restaurant.css';
 
 const Restaurant = () =>{
     return(
-        <div>
-            <h1>Restaurant</h1>
+        <div class="in-progress-container">
+            <h1>Pagina în lucru</h1>
         </div>
     );
 }

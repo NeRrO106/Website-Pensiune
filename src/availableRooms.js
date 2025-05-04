@@ -16,7 +16,6 @@ const checkAvailableRoom = async (startDate, endDate) => {
         })
         .map(reservation => reservation.roomId);
 
-    console.log("Camere rezervate în intervalul ales:", reservedRooms);
     return reservedRooms;
 };
 

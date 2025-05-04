@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 import checkAvailableRoom from '../../availableRooms';
-import "./freeRooms.css";
+import "./freeRooms.scss";
 
 const resetTime = (date) => {
     const newDate = new Date(date);
@@ -68,17 +68,16 @@ const RoomsAvailable = () =>{
             <div className='roomList'>
                 {availableRooms.length > 0 ? (
                     availableRooms.map(room =>(
-                        <div key={room.room_id} className="card">
-                            <img src={room.image} alt={room.name} className="card-img-top"/>
-                            <div className="card-body">
-                                <h5 className="card-title">{room.name}</h5>
-                                <p className="card-text">Preț: {room.price} RON/noapte</p>
-                                <p className="card-text">Capacitate: {room.capacity} persoane</p>
-                                <p className="card-text">{room.amenities.join(', ')}</p>
-                                <button 
-                                    className='custom-button'
-                                    onClick={()=>reservation(room.room_id, startDate, endDate, room.capacity)}
-                                >Rezervă această cameră</button>
+                        <div className="room-card">
+                            <img src={room.image} alt={room.name} className="room-image" />
+                            <div className="room-details">
+                                <h5 className="room-title">{room.name}</h5>
+                                <p className="room-text">Preț: {room.price} RON/noapte</p>
+                                <p className="room-text">Capacitate: {room.capacity} persoane</p>
+                                <p className="room-text">{room.amenities.join(', ')}</p>
+                                <button className="room-button" onClick={() => reservation(room.room_id, startDate, endDate, room.capacity)}>
+                                Rezervă această cameră
+                                </button>
                             </div>
                         </div>
                     ))

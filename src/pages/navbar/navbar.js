@@ -1,64 +1,22 @@
-import React from 'react';
-import './navbar.css';
+import React, {useState} from 'react';
+import '../navbar/navbar.scss';
 
 const NavBar = () => {
-    return (
-        <nav className="navbar navbar-light navbar-expand-md position-absolute">
-            <div className="container">
-                <button 
-                    className="navbar-toggler" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarNavDropdown" 
-                    aria-controls="navbarNavDropdown" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav d-flex justify-content-center">
-                        <li className="nav-item">
-                            <a 
-                                className="nav-link active" 
-                                aria-current="page" 
-                                href="/galery"
-                            >
-                                Galerie
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a 
-                                className="nav-link active" 
-                                aria-current="page" 
-                                href="/restaurant"
-                            >
-                                Restaurant
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a 
-                                className="nav-link active" 
-                                aria-current="page" 
-                                href="/partii"
-                            >
-                                Partii
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a 
-                                className="nav-link active" 
-                                aria-current="page" 
-                                href="/spa"
-                            >
-                                Spa
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="navbar">
+      <div className={`navbar__toggle ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}> ☰ </div>
+      <ul className={`navbar__links ${menuOpen ? 'active' : ''}`}>
+        <li><a className="nav-link" href="/" onClick={() => setMenuOpen(false)}>Acasă</a></li>
+        <li><a className="nav-link" href="/galery" onClick={() => setMenuOpen(false)}>Galerie</a></li>
+        <li><a className="nav-link" href="/restaurant" onClick={() => setMenuOpen(false)}>Restaurant</a></li>
+        <li><a className="nav-link" href="/partii" onClick={() => setMenuOpen(false)}>Pârtii</a></li>
+        <li><a className="nav-link" href="/spa" onClick={() => setMenuOpen(false)}>SPA</a></li>
+      </ul>
+    </nav>
+  );
 };
 
 export default NavBar;

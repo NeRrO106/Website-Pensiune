@@ -33,14 +33,14 @@ const Rooms = () =>{
             <div className='roomList'>
                 {room.length > 0 ? (
                     room.map(room =>(
-                        <div key={room.room_id} className="card">
-                            <img src={room.image} alt={room.name} className="card-img-top"/>
-                            <div className="card-body">
-                                <h5 className="card-title">{room.name}</h5>
-                                <p className="card-text">Preț: {room.price} RON/noapte</p>
-                                <p className="card-text">Capacitate: {room.capacity} persoane</p>
-                                <p className="card-text">{room.amenities.join(', ')}</p>
-                                <button className='custom-button'>Vezi camera</button>
+                        <div key={room.room_id} className="room-card">
+                            <img src={room.image} alt={room.name} className="room-image" />
+                            <div className="room-details">
+                                <h5 className="room-title">{room.name}</h5>
+                                <p className="room-text">Preț: {room.price} RON/noapte</p>
+                                <p className="room-text">Capacitate: {room.capacity} persoane</p>
+                                <p className="room-text">{room.amenities.join(', ')}</p>
+                                <button className="room-button">Vezi camera</button>
                             </div>
                         </div>
                     ))
