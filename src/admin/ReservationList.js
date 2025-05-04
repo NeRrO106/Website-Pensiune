@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 
 const ReservationsList = () => {
@@ -17,15 +17,6 @@ const ReservationsList = () => {
   };
 
   const handleDelete = async (roomId) => {
-    {/*const confirmDelete = window.confirm('Ești sigur că vrei să ștergi această rezervare?');
-    if (!confirmDelete) return;
-
-    try {
-      await deleteDoc(doc(db, 'reservations', roomId));
-      fetchRooms();
-    } catch (error) {
-      console.error('Eroare la ștergerea camerei:', error);
-    }*/}
     window.confirm('In versiunea DEMO butonul nu este functional');
   };
 

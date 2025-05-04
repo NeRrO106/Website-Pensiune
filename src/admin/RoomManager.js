@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs, deleteDoc, doc, addDoc } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 
 const RoomsManager = () => {
@@ -26,48 +26,16 @@ const RoomsManager = () => {
   };
 
   const handleDelete = async (roomId) => {
-    {/*const confirmDelete = window.confirm('Ești sigur că vrei să ștergi această cameră?');
-    if (!confirmDelete) return;
-
-    try {
-      await deleteDoc(doc(db, 'rooms', roomId));
-      fetchRooms();
-    } catch (error) {
-      console.error('Eroare la ștergerea camerei:', error);
-    }*/}
     window.confirm('In versiunea DEMO butonul nu este functional');
   };
   const handleEdit = (roomId) => {
-    {/*const roomToEdit = rooms.find(room => room.id === roomId);
-    setNewRoom({
-      name: roomToEdit.name,
-      price: roomToEdit.price,
-      capacity: roomToEdit.capacity,
-      amenities: roomToEdit.amenities.join(', '),
-      image: roomToEdit.image,
-    });
-    setShowForm(true);*/}
+
     window.confirm('In versiunea DEMO butonul nu este functional');
   }
   const handleChange = (e) => {
     setNewRoom({ ...newRoom, [e.target.name]: e.target.value });
   };
   const handleAddRoom = async (e) => {
-    {/*e.preventDefault();
-    try {
-      const roomData = {
-        ...newRoom,
-        price: parseFloat(newRoom.price),
-        capacity: parseInt(newRoom.capacity),
-        amenities: newRoom.amenities.split(',').map(item => item.trim())
-      };
-      await addDoc(collection(db, 'rooms'), roomData);
-      setNewRoom({ name: '', price: '', capacity: '', amenities: '', image: '' });
-      setShowForm(false);
-      fetchRooms();
-    } catch (error) {
-      console.error('Eroare la adăugare cameră:', error);
-    }*/}
     window.confirm('In versiunea DEMO butonul nu este functional');
   };
 
