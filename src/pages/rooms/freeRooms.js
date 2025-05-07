@@ -33,6 +33,10 @@ const RoomsAvailable = () =>{
     const [availableRooms, setAvailableRooms] = useState([]);
     const { startDate, endDate, capacity } = location.state || {};
 
+    const [activeFormRoomId, setActiveFormRoomId] = useState(null);
+    const [name, setName] = useState('');
+    const [telefon, setTelefon] = useState('');
+
     useEffect(()=>{
         const fetchAvailableRooms = async ()=>{
             try{
@@ -46,14 +50,16 @@ const RoomsAvailable = () =>{
         fetchAvailableRooms();
     }, [startDate, endDate, capacity]);
 
-    const reservation = async (roomId, startDate, endDate, guest) => {
+    const reservation = async (roomId, startDate, endDate, guest,name,telefon) => {
         try {
             const reservationRef = collection(db, "reservations");
             await addDoc(reservationRef, {
                 roomId: roomId,
                 checkIn: resetTime(startDate),
                 checkOut: resetTime(endDate),
-                guest: guest
+                guest: guest,
+                name: name,
+                telefon: telefon
             });
             const updatedRooms = await getAvailableRooms(startDate, endDate, guest);
             setAvailableRooms(updatedRooms);
@@ -68,16 +74,29 @@ const RoomsAvailable = () =>{
             <div className='roomList'>
                 {availableRooms.length > 0 ? (
                     availableRooms.map(room =>(
-                        <div className="room-card">
+                        <div key={room.name} className="room-card">
                             <img src={room.image} alt={room.name} className="room-image" />
-                            <div className="room-details">
+                            <div className="room-details" style={{ marginBottom: activeFormRoomId === room.room_id ? "20px" : "0" }}>
                                 <h5 className="room-title">{room.name}</h5>
                                 <p className="room-text">Preț: {room.price} RON/noapte</p>
                                 <p className="room-text">Capacitate: {room.capacity} persoane</p>
                                 <p className="room-text">{room.amenities.join(', ')}</p>
-                                <button className="room-button" onClick={() => reservation(room.room_id, startDate, endDate, room.capacity)}>
-                                Rezervă această cameră
+                                <button
+                                    className="room-button"
+                                    onClick={() => setActiveFormRoomId(room.room_id === activeFormRoomId ? null : room.room_id)}
+                                >
+                                    {activeFormRoomId === room.room_id ? 'Anulează' : 'Fă o rezervare'}
                                 </button>
+                                {activeFormRoomId === room.room_id && (
+                                    <form className="add-room-form"   onSubmit={(e) => {
+                                        e.preventDefault();
+                                        reservation(room.room_id, startDate, endDate, room.capacity, name, telefon);
+                                    }}>
+                                        <input type="text" name="name" placeholder="Nume" value={name} onChange={(e) => setName(e.target.value)} />
+                                        <input type="text" name="telefon" placeholder="Telefon" value={telefon} onChange={(e) => setTelefon(e.target.value)} />
+                                        <button type="submit" className="btn-save">Rezervă</button>
+                                    </form>
+                                )}
                             </div>
                         </div>
                     ))

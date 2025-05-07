@@ -37,6 +37,8 @@ const ReservationsList = () => {
               <th>Check-in</th>
               <th>Check-out</th>
               <th>Nr. persoane</th>
+              <th>Nume</th>
+              <th>Telefon</th>
               <th>Acțiuni</th>
             </tr>
           </thead>
@@ -47,6 +49,8 @@ const ReservationsList = () => {
                 <td>{new Date(res.checkIn.seconds * 1000).toLocaleDateString()}</td>
                 <td>{new Date(res.checkOut.seconds * 1000).toLocaleDateString()}</td>
                 <td>{res.guest}</td>
+                <td>{res.name}</td>
+                <td>{res.telefon}</td>
                 <td>
                   <button className="btn-delete" onClick={() => handleDelete(res.id)}>Șterge</button>
                 </td>

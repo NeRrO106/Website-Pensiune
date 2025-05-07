@@ -1,12 +1,23 @@
-:root{
-  --button-color: #57ACFB;
+:root {
+  --text-color-light: #ffffff;
 
-  --background-color: #B9AAF3;
-  
+  --background-color-dark: #1f1f1f;
+  --background-color: #b9aaf3;
 
-  --text-color-dark: #000;
-  --text-color-light: #fff;
+  --button-color: #57acfb;
+
+  --hover-blue: #0056b3;
+  --hover-blue-darken: #004c99;
+  --edit-button-color: #3498db;
+  --edit-button-hover: #2980b9;
+  --delete-button-color: #e74c3c;
+  --delete-button-hover: #c0392b;
+  --add-button-color: #27ae60;
+  --add-button-hover: #219150;
+
+  --black-shadow: #000;
 }
+
 
 
 body{

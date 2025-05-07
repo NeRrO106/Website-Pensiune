@@ -1,6 +1,6 @@
 .navbar {
   background-color: var(--background-color);
-  color: white;
+  color: var(--text-color-light);
   position: fixed;
   top: 20px;
   left: 20px;
@@ -14,7 +14,7 @@
     display: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #fff;
+    color: var(--text-color-light);
   }
 
   &__links {
@@ -34,12 +34,12 @@
       text-decoration: none;
       padding: 8px 12px;
       border-radius: 10px;
-      color: white;
+      color: var(--text-color-light);
       transition: all 0.3s ease;
 
       &:hover {
         background-color: var(--button-color);
-        color: #fff;
+        color: var(--text-color-light);
         transform: translateX(5px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       }

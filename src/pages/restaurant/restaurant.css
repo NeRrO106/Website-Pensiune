@@ -1,6 +1,6 @@
 .in-progress-container h1 {
     font-size: 36px;
-    color: #fff !important;
+    color: var(--text-color-light) !important;
     font-weight: bold;
     text-align: center;
 }

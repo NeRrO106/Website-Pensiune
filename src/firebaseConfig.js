@@ -3,19 +3,19 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyCK8L-QHGVhS0Jew3CwFs8vLfJJvN92Lo0",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 
-  authDomain: "pensiune-d37bd.firebaseapp.com",
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
 
-  projectId: "pensiune-d37bd",
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
 
-  storageBucket: "pensiune-d37bd.firebasestorage.app",
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
 
-  messagingSenderId: "874143023992",
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 
-  appId: "1:874143023992:web:1409e56543626c771afe8d",
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 
-  measurementId: "G-PZ1VB46H8F"
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 
 };
 

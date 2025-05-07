@@ -52,8 +52,8 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      background-color: #0056b3;
-      color: #fff;
+      background-color: var(--hover-blue);
+      color: var(--text-color-light);
       transform: translateY(-3px);
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
@@ -84,7 +84,7 @@
       text-align: center;
 
       h3 {
-        color: red;
+        color: var(--delete-button-color);
         font-size: 16px;
         font-weight: bold;
         text-shadow: 3px 4px 10px #000;
@@ -98,7 +98,7 @@
       }
 
       .date-box {
-        background-color: white;
+        background-color: var(--text-color-light);
         color: black;
         padding: 10px;
         border-radius: 5px;
@@ -134,8 +134,8 @@
           transition: transform 0.3s ease, box-shadow 0.3s ease;
 
           &:hover {
-            background-color: #0056b3;
-            color: #fff;
+            background-color: var(--hover-blue);
+            color: var(--text-color-light);
             transform: translateY(-3px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
           }
@@ -152,8 +152,8 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
-          background-color: #0056b3;
-          color: #fff;
+          background-color: var(--hover-blue);
+          color: var(--text-color-light);
           transform: translateY(-3px);
           box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }

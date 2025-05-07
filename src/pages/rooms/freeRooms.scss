@@ -1,7 +1,7 @@
 .main {
     h2 {
       text-align: center;
-      color: #fff;
+      color: var(--text-color-light);
       position: relative;
       top: 20px;
       z-index: 1000;
@@ -72,10 +72,38 @@
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   
         &:hover {
-          background-color: #0056b3;
+          background-color: var(--hover-blue);
           transform: translateY(-2px);
         }
       }
+      .add-room-form {
+        display: grid;
+        gap: 10px;
+        background-color: #1f1f1f;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        
+      
+        input {
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+      
+        .btn-save {
+          padding: 8px;
+          background-color: #008cba;
+          color: var(--text-color-light);
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      
+          &:hover {
+            background-color: var(--hover-blue);
+          }
+        }
+      } 
     }
   }
   
