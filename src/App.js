@@ -9,21 +9,27 @@ import Spa from './pages/spa/spa';
 import NavBar from './pages/navbar/navbar';
 import RoomsAvailable from './pages/rooms/freeRooms';
 import AdminPanel from '../src/admin/AdminPanel';
+import Footer from './pages/footer';
 
 function App() {
   return (
     <Router>
+      <div className="page-wrapper">
         <NavBar />
-        <Routes>
-          <Route path = "/" element = {<Home/>}/>
-          <Route path = "/rooms" element = {<Rooms/>}/>
-          <Route path = "/availablerooms" element = {<RoomsAvailable/>}/>
-          <Route path = "/restaurant" element = {<Restaurant/>}/>
-          <Route path = "/galery" element = {<Galery/>}/>
-          <Route path = "/partii" element = {<Partii/>}/>
-          <Route path = "/spa" element = {<Spa/>}/>
-          <Route path = "/admin" element={<AdminPanel/>}/>
-        </Routes>
+        <div className="main-content">
+          <Routes>
+            <Route path = "/" element = {<Home/>}/>
+            <Route path = "/rooms" element = {<Rooms/>}/>
+            <Route path = "/availablerooms" element = {<RoomsAvailable/>}/>
+            <Route path = "/restaurant" element = {<Restaurant/>}/>
+            <Route path = "/galery" element = {<Galery/>}/>
+            <Route path = "/partii" element = {<Partii/>}/>
+            <Route path = "/spa" element = {<Spa/>}/>
+            <Route path = "/admin" element={<AdminPanel/>}/>
+          </Routes>
+        </div>
+        <Footer/>
+      </div>
     </Router>
   );
 }
