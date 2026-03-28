@@ -2,24 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
-
+  apiKey: "AIzaSyCK8L-QHGVhS0Jew3CwFs8vLfJJvN92Lo0",
+  authDomain: "pensiune-d37bd.firebaseapp.com",
+  projectId: "pensiune-d37bd",
+  storageBucket: "pensiune-d37bd.firebasestorage.app",
+  messagingSenderId: "874143023992",
+  appId: "1:874143023992:web:1409e56543626c771afe8d",
+  measurementId: "G-PZ1VB46H8F",
 };
-
-
 
 const app = initializeApp(firebaseConfig);
 
