@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="text-[10px] tracking-wider uppercase">
             <span className="opacity-40 text-stone-500">Design de</span>{" "}
             <a
-              href="https://siteul-tau.com"
+              href="https://candystudio.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-stone-300 font-medium hover:text-white transition-colors"
